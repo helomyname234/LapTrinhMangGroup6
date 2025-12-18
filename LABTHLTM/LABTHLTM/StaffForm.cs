@@ -18,7 +18,6 @@ namespace LABTHLTM
         private NetworkStream stream;
         private List<OrderView> orderList;
 
-        private System.Windows.Forms.Timer refreshTimer;
 
         public StaffForm()
         {
@@ -285,7 +284,7 @@ namespace LABTHLTM
         {
             try
             {
-                refreshTimer.Stop();
+                
                 if (isConnect)
                 {
                     await SendMessage("QUIT");
